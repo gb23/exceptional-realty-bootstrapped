@@ -1,3 +1,6 @@
+/*OVERRIDE BOOTSTRAP STYLE (b/c on HTML file you link to this stylesheet
+   AFTER you link the bootstrap.min.css stylesheet) */
+
 /*////////MEDIA ////////////*/
 
 img, video, audio, iframe, table, form {
@@ -9,4 +12,37 @@ img, video, audio, iframe, table, form {
 /*////////LAYOUT STYLES ////////////*/
 .row{
   margin-bottom: 20px;
+}
+
+/*//////////CAROUSEL STYLE //////////*/
+/*bootstrap is mobile first!*/
+
+#carousel-example-generic .item img {
+  height: auto;
+}
+
+.carousel-caption p {
+
+  display: none;
+}
+/*for small devices (using bootstrap's breakpoints):  */
+@media only screen and (min-width: 768px) {
+  #carousel-example-generic .item img {
+    height: 384px;
+  }
+}
+/*for medium devices (using bootstrap's breakpoints):  */
+@media only screen and (min-width: 992px){
+  #carousel-example-generic .item img {
+    height: 496px;
+  }
+  .carousel-caption p {
+    display: block;
+  }
+}
+/*for large devices (using bootstrap's breakpoints):  */
+@media only screen and (min-width: 1200px){
+  #carousel-example-generic .item img {
+    height: 600px;
+  }
 }
